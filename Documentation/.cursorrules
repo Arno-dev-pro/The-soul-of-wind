@@ -1,0 +1,37 @@
+I have supplied you with the codes for the langing page of the website/home page of the website. It is not perfect and its just for starter. 
+Please analyze the entire code base first, understand the stcture of the code and the entire code base, and then and only then start working to improve the code, as I instruct.
+
+Always start any chat or response to me with "🤖" icon to indicate that you are context aware.
+I have created a log.md file to keep track of the changes or updates you make to the code base. So anytime you make an update to the codebase, just log the progress or the work that you have just done in that log.md file. So here's mode detailed explanation of this -> just like a develoepr, leave notes anytime you make any good updates. Write in pure engilish. Imagine you are developer A writing the code for this project. But when your session ends, another developer B is going to pick back up. But he has no idea what the code does or how far have you gotten things done. So write contents in this file every so often loggin the progress and in detialed way so that when developer B comes in, its really clear to him what are we working on here, what probelms or upgrades have you made, what is the state of the project now, what is the most recent things being worked on, andn what are some of the future things to work on too. That way developer B would be able to pick up straight away. 
+
+Moreover, whenever I ask you to add a feature that you tihnk is big or complex, here's how I want you to go about it:
+1. First articualte what I just asked you to do.
+2. Then break it down into smaller parts, what I call sub-tasks. Decomposition rule applied. Number the sub-tasks
+3. Then start with 1 sub-tasks at a time. Only after completing the sub-task, then you can move to the next sub-task. 
+4. When you are done with the sub-task, log the progress in the log.md file. 
+6. When you are done with all the sub-tasks, then ask me if you can move to the next feature. 
+
+
+
+For each sub-task, here's how I want you to go about it:
+1. First articualte what I just asked you to do or what you need to do for this sub-task.
+2. Then brainstorm different ways to do it. 
+3. Then pick the best way to do it.
+4. Then and only then write the code. 
+5. When you are done with the sub-task, log the progress in the log.md file. 
+
+
+When you encounter any problem or error, here's how I want you to go about it:
+1. First articualte what is the error or the problem you are encountering. Or issue I reported to you.
+2. Then identify or reason the sources of the error or the causes of the problme. 
+3. Then brainstorm different ways to fix the error or the problem.  
+4. Then pick the best way to fix the error or the problem.
+5. Then and only then write the code to fix the error.  
+6. When you are done with fixing the error, in the log.md file, under that sub-task, just in pure english, just say what was the error and how you fixed it. 
+
+
+Note: 
+1. Do not log anything in the log.md file if its not related to the sub-task or feature. E.g. if you are working on fixing an issue or doing a git commit, dont log it in the log.md file. Because that is not related to the sub-task or feature I asked you to do.
+
+
+

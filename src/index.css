@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: black;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes gradientBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero-card-animated {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-card-animated::before,
+.hero-card-animated::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: inherit;
+  background: transparent;
+}
+
+/* First moving line */
+.hero-card-animated::before {
+  border: 2px solid transparent;
+  border-top-color: rgba(147, 51, 234, 0.5);
+  border-right-color: rgba(147, 51, 234, 0.5);
+  animation: border-dance 4s infinite linear;
+}
+
+/* Second moving line */
+.hero-card-animated::after {
+  border: 2px solid transparent;
+  border-bottom-color: rgba(147, 51, 234, 0.5);
+  border-left-color: rgba(147, 51, 234, 0.5);
+  animation: border-dance 4s infinite linear reverse;
+}
+
+@keyframes border-dance {
+  0% {
+    clip-path: inset(0 0 100% 0);
+  }
+
+  25% {
+    clip-path: inset(0 0 0 100%);
+  }
+
+  50% {
+    clip-path: inset(100% 0 0 0);
+  }
+
+  75% {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  100% {
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+.hero-card-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #000, #272727);
+  border-radius: inherit;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.intro-animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
+}
+
+.intro-animation-container.fade-out {
+  opacity: 0;
+}
+
+.intro-text {
+  font-family: 'Dosis', sans-serif;
+  font-size: 70px;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: white;
+  will-change: transform;
+}
+
+.intro-word {
+  display: inline-block;
+  opacity: 0;
+  animation: wordFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.intro-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: letterSlideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes wordFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes letterSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
