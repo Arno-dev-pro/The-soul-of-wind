@@ -77,8 +77,12 @@ const Distribution = () => {
                         <Link to="/services" className="hover:text-purple-500 transition-colors">
                             <button className={location.pathname === '/services' ? 'text-purple-500' : ''}>Services</button>
                         </Link>
-                        <button>About Us</button>
-                        <button>Contact</button>
+                        <Link to="/about" className="hover:text-purple-500 transition-colors">
+                            <button className={location.pathname === '/about' ? 'text-purple-500' : ''}>About Us</button>
+                        </Link>
+                        <Link to="/contact" className="hover:text-purple-500 transition-colors">
+                            <button className={location.pathname === '/contact' ? 'text-purple-500' : ''}>Contact</button>
+                        </Link>
                     </div>
                 </div>
 

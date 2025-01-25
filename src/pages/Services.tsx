@@ -22,7 +22,9 @@ const Services = () => {
                         <Link to="/about" className="hover:text-purple-500 transition-colors">
                             <button className={location.pathname === '/about' ? 'text-purple-500' : ''}>About Us</button>
                         </Link>
-                        <button>Contact</button>
+                        <Link to="/contact" className="hover:text-purple-500 transition-colors">
+                            <button className={location.pathname === '/contact' ? 'text-purple-500' : ''}>Contact</button>
+                        </Link>
                     </div>
                 </div>
 
@@ -167,23 +169,4 @@ const Services = () => {
     );
 };
 
-export default Services;
-
-<style jsx>{`
-    .services-container {
-        position: relative;
-    }
-    
-    .services-container::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at top right, rgba(74, 222, 128, 0.1), transparent 40%),
-                    radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.1), transparent 40%);
-        pointer-events: none;
-        z-index: -1;
-    }
-`}</style> 
+export default Services; 

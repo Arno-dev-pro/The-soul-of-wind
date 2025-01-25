@@ -7,6 +7,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Distribution from './pages/Distribution';
 import Services from './pages/Services';
 import AboutUs from './pages/AboutUs';
+import Contact from './pages/Contact';
 
 const heroGames = [
   {
@@ -216,7 +217,9 @@ function App() {
                       <Link to="/about" className="hover:text-purple-500 transition-colors">
                         <button className={location.pathname === '/about' ? 'text-purple-500' : ''}>About Us</button>
                       </Link>
-                      <button>Contact</button>
+                      <Link to="/contact" className="hover:text-purple-500 transition-colors">
+                        <button className={location.pathname === '/contact' ? 'text-purple-500' : ''}>Contact</button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -265,6 +268,7 @@ function App() {
             <Route path="/distribution" element={<Distribution />} />
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </div>

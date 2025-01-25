@@ -22,7 +22,9 @@ const AboutUs = () => {
                         <Link to="/about" className="hover:text-purple-500 transition-colors">
                             <button className={location.pathname === '/about' ? 'text-purple-500' : ''}>About Us</button>
                         </Link>
-                        <button>Contact</button>
+                        <Link to="/contact" className="hover:text-purple-500 transition-colors">
+                            <button className={location.pathname === '/contact' ? 'text-purple-500' : ''}>Contact</button>
+                        </Link>
                     </div>
                 </div>
 
