@@ -3,6 +3,8 @@ import Sidebar from './components/Sidebar';
 import GameCard from './components/GameCard';
 import IntroOverlay from './components/IntroOverlay';
 import IntroAnimation from './components/IntroAnimation';
+import { Routes, Route, Link } from 'react-router-dom';
+import Distribution from './pages/Distribution';
 
 const heroGames = [
   {
@@ -193,60 +195,69 @@ function App() {
         {/* Main Content Container */}
         <div className="relative z-10">
           <Sidebar />
-          <main className="pl-24 pr-8 py-8">
-            <div className="flex justify-between items-center mb-8">
-              <div>
-                <h1 className="text-3xl font-bold text-white mb-2">Discover</h1>
-                <div className="flex gap-6 text-white/60">
-                  <button className="text-purple-500">Home</button>
-                  <button>Distribution</button>
-                  <button>Services</button>
-                  <button>About Us</button>
-                  <button>Contact</button>
+          <Routes>
+            <Route path="/" element={
+              <main className="pl-24 pr-8 py-8">
+                <div className="flex justify-between items-center mb-8">
+                  <div>
+                    <h1 className="text-3xl font-bold text-white mb-2">Discover</h1>
+                    <div className="flex gap-6 text-white/60">
+                      <Link to="/" className="hover:text-purple-500 transition-colors">
+                        <button className={location.pathname === '/' ? 'text-purple-500' : ''}>Home</button>
+                      </Link>
+                      <Link to="/distribution" className="hover:text-purple-500 transition-colors">
+                        <button className={location.pathname === '/distribution' ? 'text-purple-500' : ''}>Distribution</button>
+                      </Link>
+                      <button>Services</button>
+                      <button>About Us</button>
+                      <button>Contact</button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            {/* Hero Section */}
-            <div className="grid grid-cols-3 gap-6 mb-8">
-              <div className="col-span-2">
-                <GameCard {...heroGames[0]} size="large" />
-              </div>
-              <div className="col-span-1">
-                <GameCard {...heroGames[1]} size="large" />
-              </div>
-            </div>
+                {/* Hero Section */}
+                <div className="grid grid-cols-3 gap-6 mb-8">
+                  <div className="col-span-2">
+                    <GameCard {...heroGames[0]} size="large" />
+                  </div>
+                  <div className="col-span-1">
+                    <GameCard {...heroGames[1]} size="large" />
+                  </div>
+                </div>
 
-            {/* Popular Videos Section */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-white mb-6">Popular Videos</h2>
-              <div className="grid grid-cols-4 gap-4">
-                {gridGames.map((game, index) => (
-                  <GameCard key={index} {...game} size="small" />
-                ))}
-              </div>
-            </div>
+                {/* Popular Videos Section */}
+                <div className="mb-12">
+                  <h2 className="text-2xl font-bold text-white mb-6">Popular Videos</h2>
+                  <div className="grid grid-cols-4 gap-4">
+                    {gridGames.map((game, index) => (
+                      <GameCard key={index} {...game} size="small" />
+                    ))}
+                  </div>
+                </div>
 
-            {/* Spotify Playlists Section */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-white mb-6">Spotify Playlists</h2>
-              <div className="grid grid-cols-4 gap-4">
-                {spotifyPlaylists.map((playlist, index) => (
-                  <GameCard key={index} {...playlist} size="small" />
-                ))}
-              </div>
-            </div>
+                {/* Spotify Playlists Section */}
+                <div className="mb-12">
+                  <h2 className="text-2xl font-bold text-white mb-6">Spotify Playlists</h2>
+                  <div className="grid grid-cols-4 gap-4">
+                    {spotifyPlaylists.map((playlist, index) => (
+                      <GameCard key={index} {...playlist} size="small" />
+                    ))}
+                  </div>
+                </div>
 
-            {/* Artist Releases Section */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-white mb-6">Artist Released</h2>
-              <div className="grid grid-cols-4 gap-4">
-                {artistReleases.map((artist, index) => (
-                  <GameCard key={index} {...artist} size="small" />
-                ))}
-              </div>
-            </div>
-          </main>
+                {/* Artist Releases Section */}
+                <div className="mb-12">
+                  <h2 className="text-2xl font-bold text-white mb-6">Artist Released</h2>
+                  <div className="grid grid-cols-4 gap-4">
+                    {artistReleases.map((artist, index) => (
+                      <GameCard key={index} {...artist} size="small" />
+                    ))}
+                  </div>
+                </div>
+              </main>
+            } />
+            <Route path="/distribution" element={<Distribution />} />
+          </Routes>
         </div>
       </div>
     </>
