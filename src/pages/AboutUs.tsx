@@ -64,6 +64,61 @@ const AboutUs = () => {
                         />
                     </div>
                 </div>
+
+                {/* Features Section */}
+                <div className="mt-24 mb-12">
+                    <h2 className="text-4xl font-bold text-white text-center mb-12">
+                        Why Choose The Soul of Wind?
+                    </h2>
+
+                    <div className="bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 p-12">
+                        <div className="grid grid-cols-4 gap-8">
+                            {/* Worldwide Music Distribution */}
+                            <div className="group bg-yellow-500/10 backdrop-blur-md rounded-3xl p-8 border border-yellow-500/20
+                                hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/20">
+                                <div className="flex flex-col h-full">
+                                    <h3 className="text-2xl font-bold text-white mb-4">Worldwide Music Distribution</h3>
+                                    <p className="text-gray-400 leading-relaxed">
+                                        Get your music playing in over 130 digital stores and streaming services across 150+ countries worldwide.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Diversity */}
+                            <div className="group bg-cyan-500/10 backdrop-blur-md rounded-3xl p-8 border border-cyan-500/20
+                                hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20">
+                                <div className="flex flex-col h-full">
+                                    <h3 className="text-2xl font-bold text-white mb-4">Diversity</h3>
+                                    <p className="text-gray-400 leading-relaxed">
+                                        We collaborate with Artists, Labels and Content Creators. We have engineers and systems ready to support and promote your products, helping partners grow and break through.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Copyright Protection */}
+                            <div className="group bg-purple-500/10 backdrop-blur-md rounded-3xl p-8 border border-purple-500/20
+                                hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+                                <div className="flex flex-col h-full">
+                                    <h3 className="text-2xl font-bold text-white mb-4">Copyright Protection</h3>
+                                    <p className="text-gray-400 leading-relaxed">
+                                        We make sure to increase your views and revenues, managing and protecting your rights on YouTube, Facebook and some other platforms with a bunch of powerful tools.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Comprehensive Sales Data */}
+                            <div className="group bg-pink-500/10 backdrop-blur-md rounded-3xl p-8 border border-pink-500/20
+                                hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20">
+                                <div className="flex flex-col h-full">
+                                    <h3 className="text-2xl font-bold text-white mb-4">Comprehensive Sales Data</h3>
+                                    <p className="text-gray-400 leading-relaxed">
+                                        Find out exactly where fans are downloading and streaming your music so you can increase marketing efforts and plan tours around those cities.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     );
