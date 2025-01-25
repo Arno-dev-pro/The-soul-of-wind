@@ -6,24 +6,26 @@ const Services = () => {
 
     return (
         <main className="pl-24 pr-8 py-8">
-            {/* Navigation */}
-            <div className="flex justify-between items-center mb-8">
-                <div className="flex gap-6 text-white/60">
-                    <Link to="/" className="hover:text-purple-500 transition-colors">
-                        <button className={location.pathname === '/' ? 'text-purple-500' : ''}>Home</button>
-                    </Link>
-                    <Link to="/distribution" className="hover:text-purple-500 transition-colors">
-                        <button className={location.pathname === '/distribution' ? 'text-purple-500' : ''}>Distribution</button>
-                    </Link>
-                    <Link to="/services" className="hover:text-purple-500 transition-colors">
-                        <button className={location.pathname === '/services' ? 'text-purple-500' : ''}>Services</button>
-                    </Link>
-                    <button>About Us</button>
-                    <button>Contact</button>
-                </div>
-            </div>
-
             <div className="max-w-7xl mx-auto">
+                {/* Navigation */}
+                <div className="flex justify-between items-center mb-8">
+                    <div className="flex gap-6 text-white/60">
+                        <Link to="/" className="hover:text-purple-500 transition-colors">
+                            <button className={location.pathname === '/' ? 'text-purple-500' : ''}>Home</button>
+                        </Link>
+                        <Link to="/distribution" className="hover:text-purple-500 transition-colors">
+                            <button className={location.pathname === '/distribution' ? 'text-purple-500' : ''}>Distribution</button>
+                        </Link>
+                        <Link to="/services" className="hover:text-purple-500 transition-colors">
+                            <button className={location.pathname === '/services' ? 'text-purple-500' : ''}>Services</button>
+                        </Link>
+                        <Link to="/about" className="hover:text-purple-500 transition-colors">
+                            <button className={location.pathname === '/about' ? 'text-purple-500' : ''}>About Us</button>
+                        </Link>
+                        <button>Contact</button>
+                    </div>
+                </div>
+
                 <h1 className="text-4xl font-bold text-white mb-12">Our Services</h1>
 
                 {/* Main service cards */}

@@ -6,6 +6,7 @@ import IntroAnimation from './components/IntroAnimation';
 import { Routes, Route, Link } from 'react-router-dom';
 import Distribution from './pages/Distribution';
 import Services from './pages/Services';
+import AboutUs from './pages/AboutUs';
 
 const heroGames = [
   {
@@ -212,7 +213,9 @@ function App() {
                       <Link to="/services" className="hover:text-purple-500 transition-colors">
                         <button className={location.pathname === '/services' ? 'text-purple-500' : ''}>Services</button>
                       </Link>
-                      <button>About Us</button>
+                      <Link to="/about" className="hover:text-purple-500 transition-colors">
+                        <button className={location.pathname === '/about' ? 'text-purple-500' : ''}>About Us</button>
+                      </Link>
                       <button>Contact</button>
                     </div>
                   </div>
@@ -261,6 +264,7 @@ function App() {
             } />
             <Route path="/distribution" element={<Distribution />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/about" element={<AboutUs />} />
           </Routes>
         </div>
       </div>
