@@ -56,6 +56,9 @@ const Contact = () => {
 
                     {/* Right Section - Contact Form */}
                     <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-6 border border-white/10 h-[550px]">
+                        <p className="text-gray-300 mb-6">
+                            Fill in this form to get more information. We'll contact you within 24 hours.
+                        </p>
                         <form className="space-y-3">
                             <div>
                                 <input
@@ -112,15 +115,17 @@ const Contact = () => {
                                     placeholder="Describly your catalog briefly"
                                 ></textarea>
                             </div>
-                            <button
-                                type="submit"
-                                className="flex items-center justify-center gap-2 px-6 py-2 border border-pink-500 text-white rounded-lg hover:bg-pink-500/10 transition-colors"
-                            >
-                                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 12H20M20 12L13 5M20 12L13 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                                <span>Send Now</span>
-                            </button>
+                            <div className="mt-6">
+                                <button
+                                    type="submit"
+                                    className="flex items-center justify-center gap-2 px-6 py-2 border border-pink-500 text-white rounded-lg hover:bg-pink-500/10 transition-colors"
+                                >
+                                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 12H20M20 12L13 5M20 12L13 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                    <span>Send Now</span>
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
