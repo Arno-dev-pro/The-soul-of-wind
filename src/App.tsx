@@ -15,7 +15,7 @@ const heroGames = [
     description: "Immerse yourself in the calming atmosphere of a rainy evening. Perfect for deep focus and productivity.",
     reviews: 69,
     views: "M",
-    image: "/src/assets/69M views.jpg",
+    image: "/The-soul-of-wind/assets/69M views.jpg",
     videoUrl: "https://www.youtube.com/watch?v=HSOtku1j600"
   },
   {
@@ -23,7 +23,7 @@ const heroGames = [
     description: "Peaceful forest ambience with gentle rain and nature sounds. Ideal for study sessions and meditation.",
     reviews: 30,
     views: "M",
-    image: "/src/assets/30M views.jpg",
+    image: "/The-soul-of-wind/assets/30M views.jpg",
     videoUrl: "https://www.youtube.com/watch?v=c4s21yGFOdc"
   }
 ];
@@ -34,7 +34,7 @@ const gridGames = [
     description: "Relax with the serene view of a sunset over a calm lake. Perfect for unwinding and reflection.",
     reviews: 5.2,
     views: "M",
-    image: "/src/assets/360_F_793994473_VD47q7y003VpWwhmjRZV0iS3su02zRya.jpg",
+    image: "/The-soul-of-wind/assets/360_F_793994473_VD47q7y003VpWwhmjRZV0iS3su02zRya.jpg",
     videoUrl: "https://www.youtube.com/watch?v=hix4zcXkk-k"
   },
   {
@@ -68,7 +68,7 @@ const spotifyPlaylists = [
     title: "Gaming Beats",
     rating: 8.8,
     reviews: 2.1,
-    image: "/src/assets/beautiful-anime-6pxtfixyn3ku7622.jpg",
+    image: "/The-soul-of-wind/assets/beautiful-anime-6pxtfixyn3ku7622.jpg",
     description: "Epic gaming soundtracks to fuel your gameplay.",
     type: "Playlist",
     videoUrl: "https://www.youtube.com/watch?v=dT7XP6ULX6M"
@@ -107,7 +107,7 @@ const artistReleases = [
     title: "Mick Gordon",
     rating: 9.5,
     reviews: 4.2,
-    image: "/src/assets/Piano Music _ Rain Sounds 🌧.2d5b873e64c6de343495.jpg",
+    image: "/The-soul-of-wind/assets/Piano Music _ Rain Sounds 🌧.2d5b873e64c6de343495.jpg",
     description: "Latest releases from the DOOM composer.",
     type: "Artist",
     videoUrl: "https://www.youtube.com/watch?v=hmLno7gtQ88"
@@ -196,7 +196,7 @@ function App() {
               }
             }}
           >
-            <source src="./background.mp4" type="video/mp4" />
+            <source src="/The-soul-of-wind/background.mp4" type="video/mp4" />
             {/* Fallback message */}
             Your browser does not support the video tag.
           </video>
