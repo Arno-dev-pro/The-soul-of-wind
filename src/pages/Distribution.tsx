@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const distributionContent = [
     {
@@ -59,10 +60,29 @@ const distributionContent = [
 ];
 
 const Distribution = () => {
+    const location = useLocation();
+
     return (
         <main className="pl-24 pr-8 py-8">
             <div className="max-w-7xl mx-auto">
-                {/* Header */}
+                {/* Navigation */}
+                <div className="flex justify-between items-center mb-8">
+                    <div className="flex gap-6 text-white/60">
+                        <Link to="/" className="hover:text-purple-500 transition-colors">
+                            <button className={location.pathname === '/' ? 'text-purple-500' : ''}>Home</button>
+                        </Link>
+                        <Link to="/distribution" className="hover:text-purple-500 transition-colors">
+                            <button className={location.pathname === '/distribution' ? 'text-purple-500' : ''}>Distribution</button>
+                        </Link>
+                        <Link to="/services" className="hover:text-purple-500 transition-colors">
+                            <button className={location.pathname === '/services' ? 'text-purple-500' : ''}>Services</button>
+                        </Link>
+                        <button>About Us</button>
+                        <button>Contact</button>
+                    </div>
+                </div>
+
+                {/* Existing Distribution content */}
                 <div className="mb-12">
                     <h1 className="text-5xl font-bold text-white mb-4">Our Content<br />Made Possible By <span className="text-[#E2FF32]">Distributions</span></h1>
                     <p className="text-gray-400 text-lg max-w-2xl mb-12">

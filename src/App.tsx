@@ -5,6 +5,7 @@ import IntroOverlay from './components/IntroOverlay';
 import IntroAnimation from './components/IntroAnimation';
 import { Routes, Route, Link } from 'react-router-dom';
 import Distribution from './pages/Distribution';
+import Services from './pages/Services';
 
 const heroGames = [
   {
@@ -208,7 +209,9 @@ function App() {
                       <Link to="/distribution" className="hover:text-purple-500 transition-colors">
                         <button className={location.pathname === '/distribution' ? 'text-purple-500' : ''}>Distribution</button>
                       </Link>
-                      <button>Services</button>
+                      <Link to="/services" className="hover:text-purple-500 transition-colors">
+                        <button className={location.pathname === '/services' ? 'text-purple-500' : ''}>Services</button>
+                      </Link>
                       <button>About Us</button>
                       <button>Contact</button>
                     </div>
@@ -257,6 +260,7 @@ function App() {
               </main>
             } />
             <Route path="/distribution" element={<Distribution />} />
+            <Route path="/services" element={<Services />} />
           </Routes>
         </div>
       </div>
