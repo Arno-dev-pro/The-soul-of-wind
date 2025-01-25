@@ -16,9 +16,7 @@ const heroGames = [
     reviews: 69,
     views: "M",
     image: "/src/assets/69M views.jpg",
-    isFreeToPlay: true,
-
-
+    videoUrl: "https://www.youtube.com/watch?v=HSOtku1j600"
   },
   {
     title: "Forest Serenity",
@@ -26,7 +24,7 @@ const heroGames = [
     reviews: 30,
     views: "M",
     image: "/src/assets/30M views.jpg",
-    isFreeToPlay: true,
+    videoUrl: "https://www.youtube.com/watch?v=c4s21yGFOdc"
   }
 ];
 
@@ -37,6 +35,7 @@ const gridGames = [
     reviews: 5.2,
     views: "M",
     image: "/src/assets/360_F_793994473_VD47q7y003VpWwhmjRZV0iS3su02zRya.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=hix4zcXkk-k"
   },
   {
     title: "Mystic Moonlight",
@@ -44,6 +43,7 @@ const gridGames = [
     reviews: 4.8,
     views: "M",
     image: "/src/assets/846cd0fae3dff07a325e7c1befa517d2.png",
+    videoUrl: "https://www.youtube.com/watch?v=fdF42hNMHKA"
   },
   {
     title: "Cyber Dreams",
@@ -51,6 +51,7 @@ const gridGames = [
     reviews: 7.2,
     views: "M",
     image: "/src/assets/1328396.png",
+    videoUrl: "https://www.youtube.com/watch?v=UAlcjVZWtgc"
   },
   {
     title: "Ethereal Echoes",
@@ -58,6 +59,7 @@ const gridGames = [
     reviews: 8.9,
     views: "M",
     image: "/src/assets/anh-vd2.79eea92a3c84b9490cc9.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=SPsX4ATFH9Q"
   }
 ];
 
@@ -68,7 +70,8 @@ const spotifyPlaylists = [
     reviews: 2.1,
     image: "/src/assets/beautiful-anime-6pxtfixyn3ku7622.jpg",
     description: "Epic gaming soundtracks to fuel your gameplay.",
-    type: "Playlist"
+    type: "Playlist",
+    videoUrl: "https://www.youtube.com/watch?v=dT7XP6ULX6M"
   },
   {
     title: "Cyberpunk Mix",
@@ -76,7 +79,8 @@ const spotifyPlaylists = [
     reviews: 3.3,
     image: "/src/assets/Deep Sleeping Music.4ff4a7b49a821a6952cd.jpg",
     description: "Synthwave and electronic beats for your cyber adventures.",
-    type: "Playlist"
+    type: "Playlist",
+    videoUrl: "https://www.youtube.com/watch?v=0uOwesz0ySY"
   },
   {
     title: "RPG Ambient",
@@ -84,7 +88,8 @@ const spotifyPlaylists = [
     reviews: 1.8,
     image: "/src/assets/desktop-wallpaper-create-anime-backgrounds-style-by-dazzy-dazefiverr-anime-setting.jpg",
     description: "Atmospheric music for your fantasy RPG sessions.",
-    type: "Playlist"
+    type: "Playlist",
+    videoUrl: "https://www.youtube.com/watch?v=VXyA_76lhJw"
   },
   {
     title: "Battle Royale",
@@ -92,7 +97,8 @@ const spotifyPlaylists = [
     reviews: 2.5,
     image: "/src/assets/hqdefault.jpg",
     description: "High-energy tracks for intense gaming moments.",
-    type: "Playlist"
+    type: "Playlist",
+    videoUrl: "https://www.youtube.com/watch?v=A3_LFFg37tc"
   }
 ];
 
@@ -103,7 +109,8 @@ const artistReleases = [
     reviews: 4.2,
     image: "/src/assets/Piano Music _ Rain Sounds 🌧.2d5b873e64c6de343495.jpg",
     description: "Latest releases from the DOOM composer.",
-    type: "Artist"
+    type: "Artist",
+    videoUrl: "https://www.youtube.com/watch?v=hmLno7gtQ88"
   },
   {
     title: "HEALTH",
@@ -111,7 +118,8 @@ const artistReleases = [
     reviews: 3.7,
     image: "/src/assets/Sakura Piano Melodies.5c23237b1ba64d9e6c2f.png",
     description: "New tracks from Max Payne 3 composers.",
-    type: "Artist"
+    type: "Artist",
+    videoUrl: "https://www.youtube.com/watch?v=AUVHr0_tVOs"
   },
   {
     title: "Jesper Kyd",
@@ -119,7 +127,8 @@ const artistReleases = [
     reviews: 3.9,
     image: "/src/assets/Sleep,Study,Work.bbcbdfa98c60e03f6c79.jpg",
     description: "Assassin's Creed composer's latest work.",
-    type: "Artist"
+    type: "Artist",
+    videoUrl: "https://www.youtube.com/watch?v=A3_LFFg37tc"
   },
   {
     title: "Hans Zimmer",
@@ -127,7 +136,8 @@ const artistReleases = [
     reviews: 5.1,
     image: "/src/assets/the soul of wind.PNG",
     description: "Epic orchestral game soundtracks.",
-    type: "Artist"
+    type: "Artist",
+    videoUrl: "https://www.youtube.com/watch?v=8S09X3e9d2I"
   }
 ];
 

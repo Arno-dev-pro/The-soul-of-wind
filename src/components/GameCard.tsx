@@ -7,6 +7,7 @@ interface GameCardProps {
   views?: string;
   image: string;
   size?: 'large' | 'small';
+  videoUrl: string;
 }
 
 const GameCard: React.FC<GameCardProps> = ({
@@ -16,6 +17,7 @@ const GameCard: React.FC<GameCardProps> = ({
   views = 'k',
   image,
   size = 'small',
+  videoUrl,
 }) => {
   const isLarge = size === 'large';
 
@@ -57,9 +59,14 @@ const GameCard: React.FC<GameCardProps> = ({
             {!isLarge && (
               <span className="text-white/60 text-sm">{reviews}{views} views</span>
             )}
-            <button className="px-6 py-2 bg-purple-600 hover:bg-purple-700 transition-colors rounded-lg text-white font-medium">
+            <a
+              href={videoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2 bg-purple-600 hover:bg-purple-700 transition-colors rounded-lg text-white font-medium inline-block"
+            >
               Watch Now
-            </button>
+            </a>
           </div>
         </div>
       </div>
