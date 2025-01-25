@@ -8,6 +8,7 @@ interface GameCardProps {
   image: string;
   size?: 'large' | 'small';
   videoUrl: string;
+  type?: 'Playlist' | 'Artist';
 }
 
 const GameCard: React.FC<GameCardProps> = ({
@@ -18,6 +19,7 @@ const GameCard: React.FC<GameCardProps> = ({
   image,
   size = 'small',
   videoUrl,
+  type,
 }) => {
   const isLarge = size === 'large';
 
@@ -59,14 +61,12 @@ const GameCard: React.FC<GameCardProps> = ({
             {!isLarge && (
               <span className="text-white/60 text-sm">{reviews}{views} views</span>
             )}
-            <a
-              href={videoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => window.open(videoUrl, '_blank')}
               className="px-6 py-2 bg-purple-600 hover:bg-purple-700 transition-colors rounded-lg text-white font-medium inline-block"
             >
-              Watch Now
-            </a>
+              {type === 'Playlist' ? 'Listen Now' : 'Watch Now'}
+            </button>
           </div>
         </div>
       </div>
