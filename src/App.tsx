@@ -3,7 +3,7 @@ import Sidebar from './components/Sidebar';
 import GameCard from './components/GameCard';
 import IntroOverlay from './components/IntroOverlay';
 import IntroAnimation from './components/IntroAnimation';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, Navigate } from 'react-router-dom';
 import Distribution from './pages/Distribution';
 import Services from './pages/Services';
 import AboutUs from './pages/AboutUs';
@@ -42,7 +42,7 @@ const gridGames = [
     description: "Experience the mystical ambience of a moonlit night. Ideal for meditation and deep thought.",
     reviews: 4.8,
     views: "M",
-    image: "/src/assets/846cd0fae3dff07a325e7c1befa517d2.png",
+    image: "/The-soul-of-wind/assets/846cd0fae3dff07a325e7c1befa517d2.png",
     videoUrl: "https://www.youtube.com/watch?v=fdF42hNMHKA"
   },
   {
@@ -50,7 +50,7 @@ const gridGames = [
     description: "Immerse yourself in a futuristic cyber world. Great for focus and creative inspiration.",
     reviews: 7.2,
     views: "M",
-    image: "/src/assets/1328396.png",
+    image: "/The-soul-of-wind/assets/1328396.png",
     videoUrl: "https://www.youtube.com/watch?v=UAlcjVZWtgc"
   },
   {
@@ -58,7 +58,7 @@ const gridGames = [
     description: "Let the ethereal sounds guide you to a place of peace and tranquility.",
     reviews: 8.9,
     views: "M",
-    image: "/src/assets/anh-vd2.79eea92a3c84b9490cc9.jpg",
+    image: "/The-soul-of-wind/assets/anh-vd2.79eea92a3c84b9490cc9.jpg",
     videoUrl: "https://www.youtube.com/watch?v=SPsX4ATFH9Q"
   }
 ];
@@ -77,7 +77,7 @@ const spotifyPlaylists = [
     title: "Cyberpunk Mix",
     rating: 9.1,
     reviews: 3.3,
-    image: "/src/assets/Deep Sleeping Music.4ff4a7b49a821a6952cd.jpg",
+    image: "/The-soul-of-wind/assets/Deep Sleeping Music.4ff4a7b49a821a6952cd.jpg",
     description: "Synthwave and electronic beats for your cyber adventures.",
     type: "Playlist",
     videoUrl: "https://www.youtube.com/watch?v=0uOwesz0ySY"
@@ -86,7 +86,7 @@ const spotifyPlaylists = [
     title: "RPG Ambient",
     rating: 8.9,
     reviews: 1.8,
-    image: "/src/assets/desktop-wallpaper-create-anime-backgrounds-style-by-dazzy-dazefiverr-anime-setting.jpg",
+    image: "/The-soul-of-wind/assets/desktop-wallpaper-create-anime-backgrounds-style-by-dazzy-dazefiverr-anime-setting.jpg",
     description: "Atmospheric music for your fantasy RPG sessions.",
     type: "Playlist",
     videoUrl: "https://www.youtube.com/watch?v=VXyA_76lhJw"
@@ -95,7 +95,7 @@ const spotifyPlaylists = [
     title: "Battle Royale",
     rating: 8.7,
     reviews: 2.5,
-    image: "/src/assets/hqdefault.jpg",
+    image: "/The-soul-of-wind/assets/hqdefault.jpg",
     description: "High-energy tracks for intense gaming moments.",
     type: "Playlist",
     videoUrl: "https://www.youtube.com/watch?v=A3_LFFg37tc"
@@ -116,7 +116,7 @@ const artistReleases = [
     title: "HEALTH",
     rating: 9.2,
     reviews: 3.7,
-    image: "/src/assets/Sakura Piano Melodies.5c23237b1ba64d9e6c2f.png",
+    image: "/The-soul-of-wind/assets/Sakura Piano Melodies.5c23237b1ba64d9e6c2f.png",
     description: "New tracks from Max Payne 3 composers.",
     type: "Artist",
     videoUrl: "https://www.youtube.com/watch?v=AUVHr0_tVOs"
@@ -125,7 +125,7 @@ const artistReleases = [
     title: "Jesper Kyd",
     rating: 9.3,
     reviews: 3.9,
-    image: "/src/assets/Sleep,Study,Work.bbcbdfa98c60e03f6c79.jpg",
+    image: "/The-soul-of-wind/assets/Sleep,Study,Work.bbcbdfa98c60e03f6c79.jpg",
     description: "Assassin's Creed composer's latest work.",
     type: "Artist",
     videoUrl: "https://www.youtube.com/watch?v=A3_LFFg37tc"
@@ -134,7 +134,7 @@ const artistReleases = [
     title: "Hans Zimmer",
     rating: 9.7,
     reviews: 5.1,
-    image: "/src/assets/the soul of wind.PNG",
+    image: "/The-soul-of-wind/assets/the soul of wind.PNG",
     description: "Epic orchestral game soundtracks.",
     type: "Artist",
     videoUrl: "https://www.youtube.com/watch?v=8S09X3e9d2I"
@@ -279,6 +279,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
       </div>
